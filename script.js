@@ -9,7 +9,7 @@ function animateOnScroll() {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.2 }
   );
 
   elements.forEach(element => {
@@ -21,7 +21,7 @@ window.addEventListener('load', animateOnScroll);
 
 // animasi typing header
 const typedTextSpan = document.querySelector('.typed-text');
-const textArray = ['Halo! Selamat Datang . . '];
+const textArray = ['Halo! Selamat Datang. '];
 let textArrayIndex = 0;
 let charIndex = 0;
 

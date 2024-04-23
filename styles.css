@@ -292,7 +292,7 @@ nav.nav-sticky .logo {
     flex-direction: column;
     width: 100%;
     background-color: var(--primary);
-    padding: 1rem;
+    padding: 0rem;
     transform: translateX(-100%);
     transition: all 0.3s ease-in-out;
   }
@@ -333,6 +333,15 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   align-items: center;
+}
+
+.home .title span{
+  color: var(--text-dark);
+}
+
+.home .title span:hover{
+  color: var(--primary0-dark);
+  transition: color 0.6s;
 }
 
 /* format content */
@@ -562,3 +571,13 @@ article .description a {
   }
 }
 
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
