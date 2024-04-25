@@ -1,4 +1,3 @@
-/* Deklarasi variabel warna */
 :root {
   --primary0: #a855f7;
   --primary0-dark: #9333ea;
@@ -81,21 +80,21 @@ h2 {
   text-decoration: underline;
 }
 
-/* tinggi section */
+/* tinggi header */
 .header {
   height: 90vh;
 }
 
-.home {
-  min-height: 80vh;
+/* Tinggi section */
+section {
+  padding: 5rem 1rem; /* Mengubah padding section menjadi 5rem atas/bawah dan 1rem kiri/kanan */
 }
 
-.gallery {
-  min-height: 70vh; 
-}
-
+/* Menghapus aturan tinggi section pada elemen tertentu */
+.home
+.gallery,
 .blog {
-  min-height: 70vh; 
+  min-height: unset; /* Menghapus aturan min-height */
 }
 
 .contact {
@@ -127,13 +126,17 @@ h2 {
 }
 
 /* Warna font header */
-.header h1 {
+/* .header title {
+  color: var(--extra-light);
+} */
+
+.header .typed-text {
   color: var(--primary0);
 }
 
-.cursor {
-  color: var(--extra-light);
-  font-weight: normal; 
+.title .cursor {
+  color: var(--extra-light); 
+  font-weight: bold;
   animation: blink 0.7s infinite;
 }
 
@@ -319,12 +322,15 @@ nav.nav-sticky .logo {
   
 }
 
-/* Style section */
-section {
+/* Style home section */
+.home {
   padding: 10rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style home section */
 .home-container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -379,7 +385,7 @@ section {
 }
 
 .gallery {
-  background-color: var(--shades);
+  background-color: var();
 }
 
 
@@ -430,8 +436,30 @@ section {
   margin: auto;
 }
 
+/* Gaya CSS untuk Artikel Blog */
 article {
-  margin-bottom: 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+article .meta {
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+article .read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary0);
 }
 
 article .title {
